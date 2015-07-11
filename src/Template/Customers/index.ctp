@@ -1,0 +1,53 @@
+<div class="actions columns large-2 medium-3">
+    <h3><?= __('Actions') ?></h3>
+    <ul class="side-nav">
+        <li><?= $this->Html->link(__('New Customer'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Categories'), ['controller' => 'Categories', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Category'), ['controller' => 'Categories', 'action' => 'add']) ?></li>
+    </ul>
+</div>
+<div class="customers index large-10 medium-9 columns">
+    <table cellpadding="0" cellspacing="0">
+    <thead>
+        <tr>
+            <th><?= $this->Paginator->sort('id') ?></th>
+            <th><?= $this->Paginator->sort('name') ?></th>
+            <th><?= $this->Paginator->sort('category_id') ?></th>
+            <th><?= $this->Paginator->sort('contact_person') ?></th>
+            <th><?= $this->Paginator->sort('contact_email') ?></th>
+            <th><?= $this->Paginator->sort('contact_phone') ?></th>
+            <th><?= $this->Paginator->sort('occasion') ?></th>
+            <th class="actions"><?= __('Actions') ?></th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($customers as $customer): ?>
+        <tr>
+            <td><?= $this->Number->format($customer->id) ?></td>
+            <td><?= h($customer->name) ?></td>
+            <td>
+                <?= $customer->has('category') ? $this->Html->link($customer->category->name, ['controller' => 'Categories', 'action' => 'view', $customer->category->id]) : '' ?>
+            </td>
+            <td><?= h($customer->contact_person) ?></td>
+            <td><?= h($customer->contact_email) ?></td>
+            <td><?= h($customer->contact_phone) ?></td>
+            <td><?= h($customer->occasion) ?></td>
+            <td class="actions">
+                <?= $this->Html->link(__('View'), ['action' => 'view', $customer->id]) ?>
+                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $customer->id]) ?>
+                <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $customer->id], ['confirm' => __('Are you sure you want to delete # {0}?', $customer->id)]) ?>
+            </td>
+        </tr>
+
+    <?php endforeach; ?>
+    </tbody>
+    </table>
+    <div class="paginator">
+        <ul class="pagination">
+            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->numbers() ?>
+            <?= $this->Paginator->next(__('next') . ' >') ?>
+        </ul>
+        <p><?= $this->Paginator->counter() ?></p>
+    </div>
+</div>
