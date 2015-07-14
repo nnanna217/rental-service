@@ -1,9 +1,8 @@
 <div class="actions columns large-2 medium-3">
     <h3><?= __('Actions') ?></h3>
     <ul class="side-nav">
-        <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Profiles'), ['controller' => 'Profiles', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Profile'), ['controller' => 'Profiles', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Add User'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('All Staff'), ['controller' => 'Profiles', 'action' => 'index']) ?></li>
     </ul>
 </div>
 <div class="users index large-10 medium-9 columns">

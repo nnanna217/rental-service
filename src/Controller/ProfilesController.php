@@ -18,7 +18,31 @@ class ProfilesController extends AppController
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
-        $this->Auth->allow('add');
+        $this->Auth->allow('index');
+    }
+
+    public function isAuthorized($user)
+    {
+
+        $action = $this->request->params['action'];
+        // The add and index actions are always allowed.
+        if (in_array($action, ['index', 'add'])) {
+            return true;
+        }
+
+        // All other actions require an id.
+        if (empty($this->request->params['pass'][0])) {
+            return false;
+        }
+
+        // Check that the bookmark belongs to the current user.
+        $id = $this->request->params['pass'][0];
+        $profiles = $this->Profiles->get($id);
+        if ($profiles->user_id == $user['id']) {
+            return true;
+        }
+        return parent::isAuthorized($user);
+
     }
 
     /**
@@ -58,34 +82,25 @@ class ProfilesController extends AppController
      */
     public function add()
     {
-        $usersTable = TableRegistry::get('Users');
-        $user = $usersTable->newEntity();
-
-//        if ($this->request->is('post')) {
-//
-//            $user = $usersTable->patchEntity($user, $this->request->data['Users']);
-//            if ($usersTable->save($user)) {
-//                $profile = $this->Profiles->newEntity();
-//                $profile->user_id = $user->id;
-//                $profile = $this->Profiles->patchEntity($profile, $this->request->data);
-//                if ($this->Profiles->save($profile)) {
-//                    $this->Flash->success(__('The profile has been saved.'));
-//                    return $this->redirect(['action' => 'index']);
-//                } else {
-//                    $this->Flash->error(__('The profile could not be saved. Please, try again.'));
-//                }
-//            }
-//        }
-
-        $user = $this->Profiles->Users->newEntity();
+//        $user = $usersTable->newEntity();
         $profile = $this->Profiles->newEntity();
         if ($this->request->is('post')) {
+            $session = $this->request->session()->read('Users.data');
+            $profile->user_id = (isset($session->id)) ? $profile->user_id = $session->id : $this->Auth->user('id');
+            $profile->created_by =  $this->Auth->user('id');
             $profile = $this->Profiles->patchEntity($profile, $this->request->data);
-//            Debugger::dump($this->request->data);
-//            exit;
             if ($this->Profiles->save($profile)) {
-                $this->Flash->success(__('The profile has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                /**
+                 * @TODO Move to Event Listener
+                 */
+                $usersTable = TableRegistry::get('Users');
+                $users = $usersTable->get($profile->user_id);
+                $users->level = 2;
+//
+                if ($usersTable->save($users)) {
+                    $this->Flash->success(__('The profile has been saved.'));
+                    return $this->redirect(['action' => 'index']);
+                }
             } else {
                 $this->Flash->error(__('The profile could not be saved. Please, try again.'));
             }
@@ -109,8 +124,12 @@ class ProfilesController extends AppController
         $profile = $this->Profiles->get($id, [
             'contain' => []
         ]);
+        $session = $this->request->session()->read('Users.data');
+
         if ($this->request->is(['patch', 'post', 'put'])) {
             $profile = $this->Profiles->patchEntity($profile, $this->request->data);
+            $profile->user_id = (isset($session->id)) ? $profile->user_id = $session->id : $this->Auth->user('id');
+            $profile->modified_by =  $this->Auth->user('id');
             if ($this->Profiles->save($profile)) {
                 $this->Flash->success(__('The profile has been saved.'));
                 return $this->redirect(['action' => 'index']);

@@ -27,10 +27,10 @@ class CustomersTable extends Table
         $this->displayField('name');
         $this->primaryKey('id');
         $this->addBehavior('Timestamp');
-        $this->belongsTo('Categories', [
-            'foreignKey' => 'category_id',
-            'joinType' => 'INNER'
-        ]);
+//        $this->belongsTo('Categories', [
+//            'foreignKey' => 'category_id',
+//            'joinType' => 'INNER'
+//        ]);
     }
 
     /**
@@ -68,16 +68,7 @@ class CustomersTable extends Table
         $validator
             ->requirePresence('occasion', 'create')
             ->notEmpty('occasion');
-            
-        $validator
-            ->add('created_by', 'valid', ['rule' => 'numeric'])
-            ->requirePresence('created_by', 'create')
-            ->notEmpty('created_by');
-            
-        $validator
-            ->add('modified_by', 'valid', ['rule' => 'numeric'])
-            ->requirePresence('modified_by', 'create')
-            ->notEmpty('modified_by');
+
 
         return $validator;
     }

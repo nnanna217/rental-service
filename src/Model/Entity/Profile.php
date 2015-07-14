@@ -20,13 +20,17 @@ class Profile extends Entity
         'middlename' => true,
         'lastname' => true,
         'address' => true,
-        'email' => true,
         'phone_number' => true,
-        'next_of_kin' => true,
         'dob' => true,
         'active_fg' => true,
         'created_by' => true,
         'modified_by' => true,
         'user' => true,
     ];
+
+    protected function _getFullName()
+    {
+        return $this->_properties['firstname'] . '  ' .
+            $this->_properties['lastname'];
+    }
 }

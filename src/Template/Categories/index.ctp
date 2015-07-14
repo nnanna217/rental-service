@@ -10,12 +10,8 @@
     <table cellpadding="0" cellspacing="0">
     <thead>
         <tr>
-            <th><?= $this->Paginator->sort('id') ?></th>
             <th><?= $this->Paginator->sort('name') ?></th>
             <th><?= $this->Paginator->sort('description') ?></th>
-            <th><?= $this->Paginator->sort('active_fg') ?></th>
-            <th><?= $this->Paginator->sort('created') ?></th>
-            <th><?= $this->Paginator->sort('modified') ?></th>
             <th><?= $this->Paginator->sort('parent_id') ?></th>
             <th class="actions"><?= __('Actions') ?></th>
         </tr>
@@ -23,12 +19,8 @@
     <tbody>
     <?php foreach ($categories as $category): ?>
         <tr>
-            <td><?= $this->Number->format($category->id) ?></td>
             <td><?= h($category->name) ?></td>
             <td><?= h($category->description) ?></td>
-            <td><?= h($category->active_fg) ?></td>
-            <td><?= h($category->created) ?></td>
-            <td><?= h($category->modified) ?></td>
             <td>
                 <?= $category->has('parent_category') ? $this->Html->link($category->parent_category->name, ['controller' => 'Categories', 'action' => 'view', $category->parent_category->id]) : '' ?>
             </td>

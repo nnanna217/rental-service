@@ -6,7 +6,7 @@
                 ['action' => 'delete', $category->id],
                 ['confirm' => __('Are you sure you want to delete # {0}?', $category->id)]
             )
-        ?></li>
+            ?></li>
         <li><?= $this->Html->link(__('List Categories'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Parent Categories'), ['controller' => 'Categories', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Parent Category'), ['controller' => 'Categories', 'action' => 'add']) ?></li>
@@ -19,13 +19,10 @@
     <fieldset>
         <legend><?= __('Edit Category') ?></legend>
         <?php
-            echo $this->Form->input('name');
-            echo $this->Form->input('description');
-            echo $this->Form->input('active_fg');
-            echo $this->Form->input('parent_id', ['options' => $parentCategories, 'empty' => true]);
-            echo $this->Form->input('lft');
-            echo $this->Form->input('rght');
-            echo $this->Form->input('category_type');
+        echo $this->Form->input('name');
+        echo $this->Form->input('description');
+        echo $this->Form->input('parent_id', ['options' => $parentCategories, 'empty' => true]);
+
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

@@ -21,6 +21,8 @@ class CategoriesController extends AppController
         $this->paginate = [
             'contain' => ['ParentCategories']
         ];
+//        $categories = $this->Categories->find('threaded')
+//            ->order(['lft' => 'ASC']);
         $this->set('categories', $this->paginate($this->Categories));
         $this->set('_serialize', ['categories']);
     }

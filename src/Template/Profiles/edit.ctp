@@ -17,18 +17,12 @@
     <fieldset>
         <legend><?= __('Edit Profile') ?></legend>
         <?php
-            echo $this->Form->input('user_id', ['options' => $users]);
             echo $this->Form->input('firstname');
             echo $this->Form->input('middlename');
             echo $this->Form->input('lastname');
             echo $this->Form->input('address');
-            echo $this->Form->input('email');
             echo $this->Form->input('phone_number');
-            echo $this->Form->input('next_of_kin');
             echo $this->Form->input('dob');
-            echo $this->Form->input('active_fg');
-            echo $this->Form->input('created_by');
-            echo $this->Form->input('modified_by');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

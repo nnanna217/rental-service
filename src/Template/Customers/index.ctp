@@ -6,13 +6,12 @@
         <li><?= $this->Html->link(__('New Category'), ['controller' => 'Categories', 'action' => 'add']) ?></li>
     </ul>
 </div>
-<div class="customers index large-10 medium-9 columns">
+<div class="customers index large-12 medium-2 columns">
     <table cellpadding="0" cellspacing="0">
     <thead>
         <tr>
             <th><?= $this->Paginator->sort('id') ?></th>
             <th><?= $this->Paginator->sort('name') ?></th>
-            <th><?= $this->Paginator->sort('category_id') ?></th>
             <th><?= $this->Paginator->sort('contact_person') ?></th>
             <th><?= $this->Paginator->sort('contact_email') ?></th>
             <th><?= $this->Paginator->sort('contact_phone') ?></th>
@@ -25,9 +24,6 @@
         <tr>
             <td><?= $this->Number->format($customer->id) ?></td>
             <td><?= h($customer->name) ?></td>
-            <td>
-                <?= $customer->has('category') ? $this->Html->link($customer->category->name, ['controller' => 'Categories', 'action' => 'view', $customer->category->id]) : '' ?>
-            </td>
             <td><?= h($customer->contact_person) ?></td>
             <td><?= h($customer->contact_email) ?></td>
             <td><?= h($customer->contact_phone) ?></td>

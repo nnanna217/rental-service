@@ -19,7 +19,7 @@ class CustomersController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Categories']
+            'contain' => []
         ];
         $this->set('customers', $this->paginate($this->Customers));
         $this->set('_serialize', ['customers']);
@@ -51,6 +51,7 @@ class CustomersController extends AppController
         $customer = $this->Customers->newEntity();
         if ($this->request->is('post')) {
             $customer = $this->Customers->patchEntity($customer, $this->request->data);
+            $customer->created_by = $this->Auth->user('id');
             if ($this->Customers->save($customer)) {
                 $this->Flash->success(__('The customer has been saved.'));
                 return $this->redirect(['action' => 'index']);
@@ -58,8 +59,8 @@ class CustomersController extends AppController
                 $this->Flash->error(__('The customer could not be saved. Please, try again.'));
             }
         }
-        $categories = $this->Customers->Categories->find('list', ['limit' => 200]);
-        $this->set(compact('customer', 'categories'));
+        //$categories = $this->Customers->Categories->find('list', ['limit' => 200]);
+        $this->set(compact('customer'));
         $this->set('_serialize', ['customer']);
     }
 

@@ -38,9 +38,9 @@ class CategoriesTable extends Table
             'className' => 'Categories',
             'foreignKey' => 'parent_id'
         ]);
-        $this->hasMany('Customers', [
-            'foreignKey' => 'category_id'
-        ]);
+//        $this->hasMany('Customers', [
+//            'foreignKey' => 'category_id'
+//        ]);
     }
 
     /**
@@ -63,20 +63,20 @@ class CategoriesTable extends Table
             ->requirePresence('description', 'create')
             ->notEmpty('description');
             
-        $validator
-            ->requirePresence('active_fg', 'create')
-            ->notEmpty('active_fg');
-            
-        $validator
-            ->add('lft', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('lft');
-            
-        $validator
-            ->add('rght', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('rght');
-            
-        $validator
-            ->allowEmpty('category_type');
+//        $validator
+//            ->requirePresence('active_fg', 'create')
+//            ->notEmpty('active_fg');
+//
+//        $validator
+//            ->add('lft', 'valid', ['rule' => 'numeric'])
+//            ->allowEmpty('lft');
+//
+//        $validator
+//            ->add('rght', 'valid', ['rule' => 'numeric'])
+//            ->allowEmpty('rght');
+//
+//        $validator
+//            ->allowEmpty('category_type');
 
         return $validator;
     }

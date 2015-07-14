@@ -60,24 +60,16 @@ class ProfilesTable extends Table
             ->allowEmpty('address');
             
         $validator
-            ->add('email', 'valid', ['rule' => 'email'])
-            ->allowEmpty('email');
-            
-        $validator
             ->requirePresence('phone_number', 'create')
             ->notEmpty('phone_number');
             
         $validator
-            ->allowEmpty('next_of_kin');
-            
-        $validator
-            ->add('dob', 'valid', ['rule' => 'datetime'])
+            ->add('dob', 'valid', ['rule' => 'date'])
             ->requirePresence('dob', 'create')
-            ->notEmpty('dob');
+            ->allowEmpty('dob');
             
         $validator
             ->add('active_fg', 'valid', ['rule' => 'numeric'])
-            ->requirePresence('active_fg', 'create')
             ->notEmpty('active_fg');
             
         $validator
@@ -100,7 +92,6 @@ class ProfilesTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->isUnique(['email']));
         $rules->add($rules->existsIn(['user_id'], 'Users'));
         return $rules;
     }

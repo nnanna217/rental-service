@@ -15,11 +15,7 @@
         <?php
             echo $this->Form->input('name');
             echo $this->Form->input('description');
-            echo $this->Form->input('active_fg');
             echo $this->Form->input('parent_id', ['options' => $parentCategories, 'empty' => true]);
-            echo $this->Form->input('lft');
-            echo $this->Form->input('rght');
-            echo $this->Form->input('category_type');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

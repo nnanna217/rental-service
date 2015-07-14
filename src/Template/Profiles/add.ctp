@@ -16,15 +16,8 @@
         echo $this->Form->input('middlename');
         echo $this->Form->input('lastname');
         echo $this->Form->input('address');
-        echo $this->Form->input('email');
         echo $this->Form->input('phone_number');
-        echo $this->Form->input('next_of_kin');
         echo $this->Form->input('dob');
-        ?>
-        <legend><?= __('Add Login details') ?></legend>
-        <?php
-            echo $this->Form->input('Users.username');
-            echo $this->Form->input('Users.password');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

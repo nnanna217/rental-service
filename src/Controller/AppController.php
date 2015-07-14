@@ -42,16 +42,37 @@ class AppController extends Controller
         $this->loadComponent('Auth', [
             'loginRedirect' => [
                 'controller'=>'Users',
-                'action'=>'index'
+                'action'=>'dashboard'
             ],'logoutRedirect' => [
                 'controller'=>'Users',
                 'action'=>'login'
+            ],
+            'authError'=>'You do not have sufficient administrative privilege.',
+            'authorize'=>array('Controller'),
+            'authenticate' => [
+                'Form' => [
+                    'fields' => ['username' => 'email']
+                ]
             ]
 
         ]);
+
+//        $this->Auth->config('authorize', [
+//            'Controller'
+//        ]);
     }
 
     public function beforeFilter(Event $event){
-        $this->Auth->allow(['login']);
+        $this->Auth->allow(['login','forgotpwd']);
+    }
+
+    public function isAuthorized($user)
+    {
+// Admin can access every action
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+// Default deny
+        return false;
     }
 }

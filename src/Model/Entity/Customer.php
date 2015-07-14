@@ -16,7 +16,7 @@ class Customer extends Entity
      */
     protected $_accessible = [
         'name' => true,
-        'category_id' => true,
+//        'category_id' => true,
         'address' => true,
         'contact_person' => true,
         'contact_email' => true,
