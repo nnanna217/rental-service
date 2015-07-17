@@ -21,9 +21,9 @@ class Customer extends Entity
         'contact_person' => true,
         'contact_email' => true,
         'contact_phone' => true,
-        'occasion' => true,
+        'customer_type' => true,
         'created_by' => true,
         'modified_by' => true,
-        'category' => true,
+        'user' => true,
     ];
 }

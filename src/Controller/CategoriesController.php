@@ -11,6 +11,19 @@ use App\Controller\AppController;
 class CategoriesController extends AppController
 {
 
+    public function isAuthorized($user)
+    {
+
+        $action = $this->request->params['action'];
+        // The add and index actions are always allowed.
+        if (in_array($action, ['add','index','view','edit'])) {
+            return true;
+        }
+
+//        $this->Flash->error(__('You do not have sufficient privileges. Contact your administrator'));
+        return parent::isAuthorized($user);
+    }
+
     /**
      * Index method
      *
@@ -37,7 +50,7 @@ class CategoriesController extends AppController
     public function view($id = null)
     {
         $category = $this->Categories->get($id, [
-            'contain' => ['ParentCategories', 'ChildCategories', 'Customers']
+            'contain' => ['ParentCategories', 'ChildCategories']
         ]);
         $this->set('category', $category);
         $this->set('_serialize', ['category']);

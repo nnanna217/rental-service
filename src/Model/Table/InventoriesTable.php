@@ -25,9 +25,11 @@ class InventoriesTable extends Table
     {
         $this->table('inventories');
         $this->displayField('name');
+        $this->primaryKey('id');
         $this->addBehavior('Timestamp');
         $this->belongsTo('Categories', [
-            'foreignKey' => 'category_id'
+            'foreignKey' => 'category_id',
+            'joinType' => 'INNER'
         ]);
     }
 
@@ -41,21 +43,24 @@ class InventoriesTable extends Table
     {
         $validator
             ->add('id', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('id');
+            ->allowEmpty('id', 'create');
             
         $validator
-            ->allowEmpty('name');
+            ->requirePresence('name', 'create')
+            ->notEmpty('name');
             
         $validator
             ->allowEmpty('description');
             
         $validator
             ->add('rate', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('rate');
+            ->requirePresence('rate', 'create')
+            ->notEmpty('rate');
             
         $validator
             ->add('quantity', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('quantity');
+            ->requirePresence('quantity', 'create')
+            ->notEmpty('quantity');
 
         return $validator;
     }

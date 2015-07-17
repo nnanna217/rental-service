@@ -101,7 +101,7 @@
             <th><?= __('Contact Person') ?></th>
             <th><?= __('Contact Email') ?></th>
             <th><?= __('Contact Phone') ?></th>
-            <th><?= __('Occasion') ?></th>
+            <th><?= __('customer_type') ?></th>
             <th><?= __('Created By') ?></th>
             <th><?= __('Modified By') ?></th>
             <th><?= __('Created') ?></th>
@@ -117,7 +117,7 @@
             <td><?= h($customers->contact_person) ?></td>
             <td><?= h($customers->contact_email) ?></td>
             <td><?= h($customers->contact_phone) ?></td>
-            <td><?= h($customers->occasion) ?></td>
+            <td><?= h($customers->customer_type) ?></td>
             <td><?= h($customers->created_by) ?></td>
             <td><?= h($customers->modified_by) ?></td>
             <td><?= h($customers->created) ?></td>

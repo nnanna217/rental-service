@@ -9,7 +9,7 @@ height: 100%;
 margin: 0;
 padding: 0;
 font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
-background: #F8F8F8;
+background: rgba(221, 195, 217, 0.24);
 font-size: 12px;
 }
 
@@ -34,9 +34,10 @@ text-decoration: underline;
 /* Header */
 
 header#header {
-height: 55px;
+height: 122px;
 width: 100%;
-background: #222222 url(../img/header_bg.png) repeat-x;
+/*background: #222222 url(../img/header_bg.png) repeat-x;*/
+    background-color: #cd798a;
 }
 
 header#header h1.site_title, header#header h2.section_title {
@@ -63,7 +64,8 @@ header#header h2.section_title {
 text-align: center;
 text-indent: 4.5%;
 width: 68%;
-background: url(../img/header_shadow.png) no-repeat left top;
+/*background: url(../img/header_shadow.png) no-repeat left top;*/
+    background-color: #cd798a;
 }
 
 .btn_view_site {
@@ -97,7 +99,7 @@ background: #F1F1F4 url(../img/secondary_bar.png) repeat-x;
 
 section#secondary_bar .user {
 float: left;
-width: 23%;
+width: 18%;
 height: 38px;
 }
 
@@ -193,7 +195,7 @@ margin: 0 5px;
 /* Sidebar */
 
 aside#sidebar {
-width: 23%;
+width: 18%;
 background: #E0E0E3 url(../img/sidebar.png) repeat;
 float: left;
 min-height: 500px;
@@ -711,7 +713,7 @@ fieldset input[type=text] {
 -moz-border-radius: 5px;
 border-radius: 5px;
 border: 1px solid #BBBBBB;
-height: 20px;
+height: 35px;
 color: #666666;
 -webkit-box-shadow: inset 0 2px 2px #ccc, 0 1px 0 #fff;
 -moz-box-shadow: inset 0 2px 2px #ccc, 0 1px 0 #fff;
@@ -722,7 +724,7 @@ margin: 0;
 display: block;
 float: left;
 width: 96%;
-margin: 0 10px;
+margin: 0 0 10px;
 }
 
 fieldset input[type=text]:focus {
@@ -735,9 +737,9 @@ box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
 
 fieldset select {
 width: 96%;
-margin: 0 10px;
+margin: 0 0 10px;
 border: 1px solid #bbb;
-height: 20px;
+height: 36px;
 color: #666666;
 }
 
@@ -756,7 +758,7 @@ margin: 0 0.5%;
 display: block;
 float: left;
 width: 96%;
-margin: 0 10px;
+margin: 0 0 10px;
 }
 
 fieldset textarea:focus {

@@ -30,6 +30,9 @@ class UsersTable extends Table
         $this->hasOne('Profiles', [
             'foreignKey' => 'user_id'
         ]);
+//        $this->hasMany('Customers', [
+//            'foreignKey' => 'created_by'
+//        ]);
     }
 
     /**
@@ -47,25 +50,52 @@ class UsersTable extends Table
         $validator
             ->add('email', 'valid', ['rule' => 'email'])
             ->notEmpty('email');
-            
+
         $validator
             ->requirePresence('password', 'create')
-            ->notEmpty('password','A password is required');
-            
+            ->notEmpty('password', 'A password is required');
+
         $validator
             ->requirePresence('role', 'create')
-            ->notEmpty('role','A role is required')
-            ->add('role','inList',
-                ['rule'=>['inList',['admin','user']],
-                'message'=>'Please enter a valid role']
+            ->notEmpty('role', 'A role is required')
+            ->add('role', 'inList',
+                ['rule' => ['inList', ['admin', 'user']],
+                    'message' => 'Please enter a valid role']
             );
-            
+
+        $validator->add('password', 'custom', ['rule' => function ($value, $context) {
+            if (isset($context->data['confirm_password']) && $value
+                != $context->data['confirm_password']
+            ) {
+                return false;
+            }
+            return true;
+        }, 'message' => "Your password does not match your confirm password. Please try again", 'on' =>
+        ['create', 'update'], 'allowEmpty' => true]);
+
+
 //        $validator
 //            ->add('active_fg', 'valid', ['rule' => 'numeric'])
 //            ->allowEmpty('active_fg');
 
         return $validator;
     }
+
+//    public function validationResetpassword(Validator $validator){
+//        $validator
+//            ->requirePresence('password')
+//            ->notEmpty('password','Please enter Password')
+//            ->add('confirm_password', [
+//                'compare' => [
+//                    'rule' => ['compareWith','password'],
+//                    'message' => 'Confirm Password does not match with Password.'
+//                ]])
+//            ->requirePresence('confirm_password')
+//            ->notEmpty('confirm_password','Please enter Confirm Password')
+//        ;
+//
+//        return $validator;
+//    }
 
     /**
      * Returns a rules checker object that will be used for validating

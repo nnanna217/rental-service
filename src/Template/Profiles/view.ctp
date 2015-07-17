@@ -1,14 +1,5 @@
-<div class="actions columns large-2 medium-3">
-    <h3><?= __('Actions') ?></h3>
-    <ul class="side-nav">
-        <li><?= $this->Html->link(__('Edit Profile'), ['action' => 'edit', $profile->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Profile'), ['action' => 'delete', $profile->id], ['confirm' => __('Are you sure you want to delete # {0}?', $profile->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Profiles'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Profile'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?> </li>
-    </ul>
-</div>
+       <?= $this->Html->link(__('Edit Profile'), ['action' => 'edit', $profile->id]) ?>
+
 <div class="profiles view large-10 medium-9 columns">
     <h2><?= h($profile->id) ?></h2>
     <div class="row">

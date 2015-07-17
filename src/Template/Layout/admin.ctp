@@ -14,6 +14,7 @@
  */
 
 $cakeDescription = 'Dashboard I Admin Panel';
+$user = $this->request->session()->read('Auth.userdetails');
 ?>
 <!doctype html>
 <html lang="en">
@@ -92,7 +93,9 @@ $cakeDescription = 'Dashboard I Admin Panel';
 <body>
 
 <header id="header">
+
     <hgroup>
+
         <h1 class="site_title"><a href="index.html">Website Admin</a></h1>
         <h2 class="section_title">Dashboard</h2>
         <div class="btn_view_site">
@@ -102,13 +105,9 @@ $cakeDescription = 'Dashboard I Admin Panel';
     </hgroup>
 </header> <!-- end of header bar -->
 
-<?php
-$authUser = $this->request->session();
-?>
-
 <section id="secondary_bar">
     <div class="user">
-        <p><?php echo $user->profile->full_name?></p>
+        <p><?php echo $user[0]->profile->full_name?></p>
         <!-- <a class="logout_user" href="#" title="Logout">Logout</a> -->
     </div>
     <div class="breadcrumbs_container">
@@ -130,7 +129,7 @@ $authUser = $this->request->session();
     echo $this->fetch('customer');
     echo $this->fetch('inventory');
     echo $this->fetch('users');
-    if($user['role'] == 'admin'):
+    if($user[0]->role == 'admin'):
     echo $this->fetch('admin');
     endif;
     echo $this->fetch('footer');

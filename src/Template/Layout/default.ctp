@@ -14,6 +14,7 @@
  */
 
 $cakeDescription = 'CakePHP: the rapid development php framework';
+$user = $this->request->session()->read('Auth.userdetails');
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,6 +27,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
+    <?= $this->Html->css('layout.css') ?>
+
+    <!--[if lt IE 9]>
+    <?= $this->Html->css('ie.css') ?>
+    <?= $this->Html->script('http://html5shim.googlecode.com/svn/trunk/html5.js') ?>
+    <![endif]-->
+    <?= $this->Html->script(['jquery-1.5.2.min','hideshow',
+        'jquery.tablesorter.min','jquery.equalHeight']);?>
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
 
@@ -35,6 +44,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
     <header>
+
         <div class="header-title">
             <span><?= $this->fetch('title') ?></span>
         </div>
@@ -52,6 +62,24 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
         <div id="content">
             <?= $this->Flash->render() ?>
+
+
+            <aside id="sidebar" class="column">
+                <?php
+                echo $this->element('sidebar',['users'=>$user]);
+                ?>
+
+                <?php
+                echo $this->fetch('customer');
+                echo $this->fetch('inventory');
+                echo $this->fetch('users');
+                if($user[0]['role'] == 'admin'):
+                    echo $this->fetch('admin');
+                endif;
+                echo $this->fetch('footer');
+                ?>
+            </aside><!-- end of sidebar -->
+
 
             <div class="row">
                 <?= $this->fetch('content') ?>

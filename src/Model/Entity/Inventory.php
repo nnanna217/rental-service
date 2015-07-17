@@ -15,7 +15,6 @@ class Inventory extends Entity
      * @var array
      */
     protected $_accessible = [
-        'id' => true,
         'category_id' => true,
         'name' => true,
         'description' => true,

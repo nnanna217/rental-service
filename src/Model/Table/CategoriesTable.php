@@ -38,7 +38,7 @@ class CategoriesTable extends Table
             'className' => 'Categories',
             'foreignKey' => 'parent_id'
         ]);
-//        $this->hasMany('Customers', [
+//        $this->hasMany('Categories', [
 //            'foreignKey' => 'category_id'
 //        ]);
     }

@@ -24,9 +24,13 @@ class ProfilesController extends AppController
     public function isAuthorized($user)
     {
 
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+
         $action = $this->request->params['action'];
         // The add and index actions are always allowed.
-        if (in_array($action, ['index', 'add'])) {
+        if (in_array($action, ['add'])) {
             return true;
         }
 
@@ -99,7 +103,7 @@ class ProfilesController extends AppController
 //
                 if ($usersTable->save($users)) {
                     $this->Flash->success(__('The profile has been saved.'));
-                    return $this->redirect(['action' => 'index']);
+                    return $this->redirect(['controller'=>'users','action' => 'dashboard']);
                 }
             } else {
                 $this->Flash->error(__('The profile could not be saved. Please, try again.'));

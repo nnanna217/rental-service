@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ef2254b87b67630e4f4e3b4655ece177",
+    "hash": "87bcea2141d702a283f1422d9537b98c",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -289,6 +289,51 @@
             ],
             "description": "A composer installer for CakePHP 3.0+ plugins.",
             "time": "2015-06-10 10:35:13"
+        },
+        {
+            "name": "friendsofcake/search",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfCake/search.git",
+                "reference": "70d83bf8daf2c03979bb5f9220c9d50fd83cf040"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfCake/search/zipball/70d83bf8daf2c03979bb5f9220c9d50fd83cf040",
+                "reference": "70d83bf8daf2c03979bb5f9220c9d50fd83cf040",
+                "shasum": ""
+            },
+            "require-dev": {
+                "cakephp/cakephp": "~3.0",
+                "friendsofcake/cakephp-test-utilities": "dev-master"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Search\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Winther",
+                    "homepage": "http://cakephp.nu/",
+                    "role": "Author"
+                }
+            ],
+            "description": "CakePHP 3.0 easy search framework",
+            "homepage": "https://github.com/FriendsOfCake/search",
+            "keywords": [
+                "cake3",
+                "cakephp",
+                "cakephp3",
+                "search"
+            ],
+            "time": "2015-07-13 14:10:34"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -736,6 +781,56 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2015-06-10 15:30:22"
+        },
+        {
+            "name": "xety/cake3-upload",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Xety/Cake3-Upload.git",
+                "reference": "4f53d8284a47fa1bb943dd5640ddab52c3b6310a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Xety/Cake3-Upload/zipball/4f53d8284a47fa1bb943dd5640ddab52c3b6310a",
+                "reference": "4f53d8284a47fa1bb943dd5640ddab52c3b6310a",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/plugin-installer": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "3.0.*-dev",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Xety\\Cake3Upload\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Xety",
+                    "email": "zoro.fmt@gmail.com",
+                    "homepage": "https://github.com/Xety"
+                }
+            ],
+            "description": "Cake3 plugin to upload files.",
+            "homepage": "https://github.com/Xety/Cake3-Upload",
+            "keywords": [
+                "cake3",
+                "cakephp",
+                "file",
+                "plugin",
+                "upload"
+            ],
+            "time": "2014-11-02 12:55:34"
         }
     ],
     "packages-dev": [
@@ -1145,6 +1240,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "friendsofcake/search": 20,
         "psy/psysh": 0
     },
     "prefer-stable": true,

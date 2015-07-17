@@ -1,12 +1,5 @@
-<div class="actions columns large-2 medium-3">
-    <h3><?= __('Actions') ?></h3>
-    <ul class="side-nav">
-        <li><?= $this->Html->link(__('New Category'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Customers'), ['controller' => 'Customers', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Customer'), ['controller' => 'Customers', 'action' => 'add']) ?></li>
-    </ul>
-</div>
-<div class="categories index large-10 medium-9 columns">
+<h3>List of Categories</h3>
+<div class="categories index large-10 medium-9 small-8 columns">
     <table cellpadding="0" cellspacing="0">
     <thead>
         <tr>

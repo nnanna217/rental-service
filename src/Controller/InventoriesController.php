@@ -11,6 +11,20 @@ use App\Controller\AppController;
 class InventoriesController extends AppController
 {
 
+
+    public function isAuthorized($user)
+    {
+
+        $action = $this->request->params['action'];
+        // The add and index actions are always allowed.
+        if (in_array($action, ['add','index','view','edit'])) {
+            return true;
+        }
+
+//        $this->Flash->error(__('You do not have sufficient privileges. Contact your administrator'));
+        return parent::isAuthorized($user);
+    }
+
     /**
      * Index method
      *

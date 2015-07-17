@@ -27,10 +27,14 @@ class CustomersTable extends Table
         $this->displayField('name');
         $this->primaryKey('id');
         $this->addBehavior('Timestamp');
-//        $this->belongsTo('Categories', [
-//            'foreignKey' => 'category_id',
-//            'joinType' => 'INNER'
-//        ]);
+        $this->belongsTo('Users', [
+            'foreignKey' => 'created_by',
+            'joinType' => 'INNER'
+        ]);
+        $this->belongsTo('Users', [
+            'foreignKey' => 'modified_by',
+            'joinType' => 'INNER'
+        ]);
     }
 
     /**
@@ -66,8 +70,8 @@ class CustomersTable extends Table
             ->notEmpty('contact_phone');
             
         $validator
-            ->requirePresence('occasion', 'create')
-            ->notEmpty('occasion');
+            ->requirePresence('customer_type', 'create')
+            ->notEmpty('customer_type');
 
 
         return $validator;

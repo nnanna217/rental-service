@@ -1,33 +1,24 @@
-<div class="actions columns large-2 medium-3">
-    <h3><?= __('Actions') ?></h3>
-    <ul class="side-nav">
-        <li><?= $this->Html->link(__('New Customer'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Categories'), ['controller' => 'Categories', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Category'), ['controller' => 'Categories', 'action' => 'add']) ?></li>
-    </ul>
-</div>
-<div class="customers index large-12 medium-2 columns">
+<legend><h3>List of Customers</h3></legend>
+<div class="customers index large-10 medium-2 columns">
     <table cellpadding="0" cellspacing="0">
     <thead>
         <tr>
-            <th><?= $this->Paginator->sort('id') ?></th>
             <th><?= $this->Paginator->sort('name') ?></th>
             <th><?= $this->Paginator->sort('contact_person') ?></th>
             <th><?= $this->Paginator->sort('contact_email') ?></th>
             <th><?= $this->Paginator->sort('contact_phone') ?></th>
-            <th><?= $this->Paginator->sort('occasion') ?></th>
+            <th><?= $this->Paginator->sort('customer_type') ?></th>
             <th class="actions"><?= __('Actions') ?></th>
         </tr>
     </thead>
     <tbody>
     <?php foreach ($customers as $customer): ?>
         <tr>
-            <td><?= $this->Number->format($customer->id) ?></td>
             <td><?= h($customer->name) ?></td>
             <td><?= h($customer->contact_person) ?></td>
             <td><?= h($customer->contact_email) ?></td>
             <td><?= h($customer->contact_phone) ?></td>
-            <td><?= h($customer->occasion) ?></td>
+            <td><?= h($customer->customer_type) ?></td>
             <td class="actions">
                 <?= $this->Html->link(__('View'), ['action' => 'view', $customer->id]) ?>
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $customer->id]) ?>

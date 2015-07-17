@@ -1,4 +1,4 @@
-<?php //debug($user['role']);
+<?php //debug($users[0]->role);
 //$authId = $this->request->session()->read('Auth.User.id');
 ?>
 <div class="spacer"></div>
@@ -23,7 +23,7 @@
 <?php $this->start('users') ?>
 <h3>Users</h3>
 <ul class="toggle">
-    <?php if ($users['role'] == 'admin'): ?>
+    <?php if ($users[0]->role == 'admin'): ?>
         <li class="icn_add_user">
             <!--        <a href="#">Add New User</a>-->
             <?php echo $this->Html->link('Add New User', ['controller' => 'users', 'action' => 'add']);?>
@@ -33,7 +33,7 @@
         </li>
     <?php endif;?>
     <li class="icn_profile">
-        <?php echo $this->Html->link('Your Profile', ['controller' => 'profiles', 'action' => 'view', $users->profile->id]);?>
+        <?php echo $this->Html->link('Your Profile', ['controller' => 'profiles', 'action' => 'view', $users[0]->profile->id]);?>
         <!--        <a href="#">Your Profile</a>-->
     </li>
 </ul>
@@ -43,8 +43,9 @@
 <h3>Inventory</h3>
 <ul class="toggle">
     <li class="icn_folder"><?php echo $this->Html->link('New Category',['controller'=>'categories', 'action'=>'add']);?></li>
-    <li class="icn_photo"><?php echo $this->Html->link('Add Item',['controller'=>'inventory', 'action'=>'add']);?></li>
-    <li class="icn_audio"><?php echo $this->Html->link('View Items',['controller'=>'inventory', 'action'=>'list']);?></li>
+    <li class="icn_folder"><?php echo $this->Html->link('View Categories',['controller'=>'categories', 'action'=>'index']);?></li>
+    <li class="icn_photo"><?php echo $this->Html->link('Add Item',['controller'=>'inventories', 'action'=>'add']);?></li>
+    <li class="icn_audio"><?php echo $this->Html->link('View Items',['controller'=>'inventories', 'action'=>'index']);?></li>
 <!--    <li class="icn_video"><a href="#">Video</a></li>-->
 </ul>
 <?php $this->end() ?>

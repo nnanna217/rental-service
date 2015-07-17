@@ -27,9 +27,13 @@ class UsersController extends AppController
     public function isAuthorized($user)
     {
 
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+
         $action = $this->request->params['action'];
         // The add and index actions are always allowed.
-        if (in_array($action, ['dashboard','add','index'])) {
+        if (in_array($action, ['index','add','dashboard'])) {
             return true;
         }
 // All other actions require an id.
@@ -90,8 +94,11 @@ class UsersController extends AppController
 //            debug($this->request->data);exit;
             $user = $this->Users->patchEntity($user, $this->request->data);
             $user->created_by = $this->Auth->user('id');
+//            debug($user);exit;
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+                //@TODO Move to Event Listener
+                $this->sendPwdResetEmail('createuser', $user->email, null,'forgotpwd');
+                $this->Flash->success(__('The user has been created and and email has been sent to '.$user->email));
                 $this->request->session()->write('Users.data', $user);
                 return $this->redirect(['controller' => 'profiles', 'action' => 'add']);
             } else {
@@ -161,13 +168,13 @@ class UsersController extends AppController
             $user = $this->Auth->identify();
             if ($user) {
                 $this->Auth->setUser($user);
-//                $level = $this->Users->find()
-//                    ->select(['level'])
-//                    ->where(['active_fg'=>1])
-//                    ->andWhere(['id'=>$this->Auth->user('id')])->toArray()
-//                ;
-//
-//                $userLevel = $level[0]['level'];
+                $userDetail = $this->Users->find()
+                    ->contain(['Profiles'])
+                    ->where(['Users.active_fg'=>1])
+                    ->andWhere(['Users.id'=>$this->Auth->user('id')])->toArray()
+                ;
+                $this->request->session()->write('Auth.userdetails',$userDetail);
+
                 if ($this->Auth->user('level') == 1) {
                     $this->Flash->set(__('Registration Incomplete. Please Complete your registration'));
                     return $this->redirect(['controller' => 'profiles', 'action' => 'add']);
@@ -184,7 +191,7 @@ class UsersController extends AppController
     }
 
     public function forgotpwd(){
-        $this->loadModel('Profile');
+        //$this->loadModel('Profile');
 
         $show_form = true;
 
@@ -202,7 +209,7 @@ class UsersController extends AppController
                     //@TODO Use Event Listeners
                         $pass_code = join('_', array(User::encrypt(date('Y-m-d H:i:s')), User::encrypt($email)));
 
-                        if ($this->sendPwdResetEmail($email, $pass_code)) {
+                        if ($this->sendPwdResetEmail('resetpassword', $email, $pass_code)) {
                             $this->Flash->set(__('Check your email for the password reset details '));
                         }
                      else {
@@ -220,15 +227,74 @@ class UsersController extends AppController
 
     }
 
-    private function sendPwdResetEmail($to, $pass_code){
-        $message = 'Click the following link to reset your password '. $this->request->domain().Router::url(['controller'=>'users','action'=>'resetpwd',$pass_code]);
-//        debug($message);
-//        debug($this->request->domain());
+    public function resetpwd($pass_code){
+
+        $show_form = true;
+        if ($this->request->is('post')) {
+            $pass_code_arr = explode('_', $pass_code, 2);
+            if ( isset($this->request->data['email'])
+                and isset($this->request->data['password'])
+                and isset($this->request->data['confirm_password'])
+            ){
+                $email = trim($this->request->data['email']);
+                $password = $this->request->data['password'];
+                $repassword = trim($this->request->data['confirm_password']);
+
+                if ($password == $repassword) {
+                    //cross check pass code
+                    $inner_pass_code = join('_', array( User::encrypt($email)));
+
+                    if ($inner_pass_code == $pass_code_arr[1]) {
+                        //check if new_account_no and email match
+
+                        $userQuery = $this->Users->find()
+                            ->select(['id'])
+                            ->where(['email =' => $email]);
+
+                        $userInfo = $userQuery->toArray();
+//                        debug($this->Users->get($userInfo[0]->id));
+//                        exit;
+                            if (!empty($userInfo)) {
+//                                $this->User->read(null, $user_id);
+                                $user = $this->Users->get($userInfo[0]->id);
+                                $user->password = $password;
+                                $this->Users->save($user);
+                                $this->Flash->set('The password successfully changed');
+                            }
+
+                        } else {
+                            $this->Flash->set('The credentials entered do not match');
+                        }
+                    }
+//                else{
+//                        $this->Flash->set('The credentials entered do not match');
+//                    }
+                } else {
+                    $this->Flash->set('The passwords entered do not match');
+                }
+            }else{
+                $this->Flash->set('An error has occurred. Please repeat the process');
+            }
+    }
+
+    private function sendPwdResetEmail($template, $to, $pass_code = null, $action = null){
+
+        if($action == null){
+            $url = $this->request->domain().Router::url(['controller'=>'users','action'=>'resetpwd',$pass_code]);
+        }else{
+            $url = $this->request->domain().Router::url(['controller'=>'users','action'=>$action]);
+        }
+
+//        debug($url);exit;
+        $message = 'Click the following link to reset your password '. $url;
         $email = new Email('gmail');
-        $email->from(['nnanna217@gmail.com' => 'KFA Rentals'])
+        $email->viewVars(['url'=>$url]);
+        $email->template($template)
+            ->subject('KFA RENTALS: Password Reset')
+            ->emailFormat('html')
             ->to($to)
-            ->subject('KFA RENTALS: Email Reset')
-            ->send($message);
+            ->from(['nnanna217@gmail.com' => 'KFA Rentals'])
+            ->send();
 
         return $email;
     }

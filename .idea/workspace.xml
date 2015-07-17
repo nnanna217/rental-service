@@ -2,66 +2,78 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c287c31f-3b2b-45a4-b853-f9c086ead262" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Layout/admin.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Users/dashboard.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Users/forgotpwd.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Element/sidebar.ctp" />
-      <change type="DELETED" beforePath="C:\wamp\www\kfa\webroot\js\empty" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Email/html/createuser.ctp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Email/html/resetpassword.ctp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Users/resetpwd.ctp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/AppController.php" afterPath="$PROJECT_DIR$/src/Controller/AppController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/AppView.php" afterPath="$PROJECT_DIR$/src/View/AppView.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/CategoriesController.php" afterPath="$PROJECT_DIR$/src/Controller/CategoriesController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Table/CategoriesTable.php" afterPath="$PROJECT_DIR$/src/Model/Table/CategoriesTable.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Entity/Customer.php" afterPath="$PROJECT_DIR$/src/Model/Entity/Customer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/CustomersController.php" afterPath="$PROJECT_DIR$/src/Controller/CustomersController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Fixture/CustomersFixture.php" afterPath="$PROJECT_DIR$/tests/Fixture/CustomersFixture.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Table/CustomersTable.php" afterPath="$PROJECT_DIR$/src/Model/Table/CustomersTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Entity/Profile.php" afterPath="$PROJECT_DIR$/src/Model/Entity/Profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/InventoriesController.php" afterPath="$PROJECT_DIR$/src/Controller/InventoriesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Fixture/InventoriesFixture.php" afterPath="$PROJECT_DIR$/tests/Fixture/InventoriesFixture.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Table/InventoriesTable.php" afterPath="$PROJECT_DIR$/src/Model/Table/InventoriesTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Entity/Inventory.php" afterPath="$PROJECT_DIR$/src/Model/Entity/Inventory.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/ProfilesController.php" afterPath="$PROJECT_DIR$/src/Controller/ProfilesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Fixture/ProfilesFixture.php" afterPath="$PROJECT_DIR$/tests/Fixture/ProfilesFixture.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Table/ProfilesTable.php" afterPath="$PROJECT_DIR$/src/Model/Table/ProfilesTable.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Entity/User.php" afterPath="$PROJECT_DIR$/src/Model/Entity/User.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/UsersController.php" afterPath="$PROJECT_DIR$/src/Controller/UsersController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Table/UsersTable.php" afterPath="$PROJECT_DIR$/src/Model/Table/UsersTable.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Categories/add.ctp" afterPath="$PROJECT_DIR$/src/Template/Categories/add.ctp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Customers/add.ctp" afterPath="$PROJECT_DIR$/src/Template/Customers/add.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Profiles/add.ctp" afterPath="$PROJECT_DIR$/src/Template/Profiles/add.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Users/add.ctp" afterPath="$PROJECT_DIR$/src/Template/Users/add.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Layout/admin.ctp" afterPath="$PROJECT_DIR$/src/Template/Layout/admin.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/bootstrap.php" afterPath="$PROJECT_DIR$/config/bootstrap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/css/cake.css" afterPath="$PROJECT_DIR$/webroot/css/cake.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Users/dashboard.ctp" afterPath="$PROJECT_DIR$/src/Template/Users/dashboard.ctp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Layout/default.ctp" afterPath="$PROJECT_DIR$/src/Template/Layout/default.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Categories/edit.ctp" afterPath="$PROJECT_DIR$/src/Template/Categories/edit.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Profiles/edit.ctp" afterPath="$PROJECT_DIR$/src/Template/Profiles/edit.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Customers/edit.ctp" afterPath="$PROJECT_DIR$/src/Template/Customers/edit.ctp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Categories/index.ctp" afterPath="$PROJECT_DIR$/src/Template/Categories/index.ctp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Customers/index.ctp" afterPath="$PROJECT_DIR$/src/Template/Customers/index.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Profiles/index.ctp" afterPath="$PROJECT_DIR$/src/Template/Profiles/index.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Users/index.ctp" afterPath="$PROJECT_DIR$/src/Template/Users/index.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Users/login.ctp" afterPath="$PROJECT_DIR$/src/Template/Users/login.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.php" afterPath="$PROJECT_DIR$/config/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/css/layout.css" afterPath="$PROJECT_DIR$/webroot/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Element/sidebar.ctp" afterPath="$PROJECT_DIR$/src/Template/Element/sidebar.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Categories/view.ctp" afterPath="$PROJECT_DIR$/src/Template/Categories/view.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Customers/view.ctp" afterPath="$PROJECT_DIR$/src/Template/Customers/view.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Profiles/view.ctp" afterPath="$PROJECT_DIR$/src/Template/Profiles/view.ctp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="kfa.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436820641376" ignored="false" />
+    <file path="/Dummy.txt" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1437072004770" ignored="false" />
     <file path="/20150710083742_create_profiles.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436517691972" ignored="false" />
     <file path="/20150710090700_add_tree_to_categories.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436519276196" ignored="false" />
-    <file path="/UsersTable.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436692280040" ignored="false" />
-    <file path="/UsersController.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436824280290" ignored="false" />
-    <file path="/add.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436862583743" ignored="false" />
-    <file path="/AppController.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436696131325" ignored="false" />
-    <file path="/User.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436821350927" ignored="false" />
+    <file path="/UsersTable.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1437084668895" ignored="false" />
+    <file path="/UsersController.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1437076083181" ignored="false" />
+    <file path="/add.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1437074091298" ignored="false" />
+    <file path="/AppController.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1437077084170" ignored="false" />
+    <file path="/User.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436926257844" ignored="false" />
     <file path="/login.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436819769674" ignored="false" />
     <file path="/ProfilesController.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436696694665" ignored="false" />
     <file path="/ProfilesTable.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436612049590" ignored="false" />
-    <file path="/index.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436625407891" ignored="false" />
-    <file path="$PROJECT_DIR$/../securetech/index.html" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436773336831" ignored="false" />
-    <file path="/index.html" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436773333373" ignored="false" />
-    <file path="$PROJECT_DIR$/../securetech/assets/css/style.css" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436747782595" ignored="false" />
-    <file path="/style.css" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436747778477" ignored="false" />
-    <file path="/admin.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436818870539" ignored="false" />
-    <file path="/layout.css" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436668332247" ignored="false" />
-    <file path="/sidebar.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436857738534" ignored="false" />
-    <file path="/CustomersController.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436686283101" ignored="false" />
-    <file path="/default.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436686783082" ignored="false" />
-    <file path="/dashboard.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436858124833" ignored="false" />
+    <file path="/index.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1437079620359" ignored="false" />
+    <file path="$PROJECT_DIR$/../securetech/index.html" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436958614186" ignored="false" />
+    <file path="/index.html" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436958595746" ignored="false" />
+    <file path="$PROJECT_DIR$/../securetech/assets/css/style.css" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436895883074" ignored="false" />
+    <file path="/style.css" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436891528655" ignored="false" />
+    <file path="/admin.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1437077879788" ignored="false" />
+    <file path="/layout.css" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436933836606" ignored="false" />
+    <file path="/sidebar.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1437077782418" ignored="false" />
+    <file path="/CustomersController.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1437084819262" ignored="false" />
+    <file path="/default.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1437077561826" ignored="false" />
+    <file path="/dashboard.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436934946124" ignored="false" />
     <file path="$USER_HOME$/Downloads/Themeforest/promo/index.html" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436752284380" ignored="false" />
     <file path="/forgotpwd.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436821885634" ignored="false" />
     <file path="/CategoriesController.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436862924646" ignored="false" />
+    <file path="/layout.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436923245179" ignored="false" />
+    <file path="/resetpwd.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436927497271" ignored="false" />
+    <file path="/createuser.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1436929992065" ignored="false" />
+    <file path="/a.dummy" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1437080990734" ignored="false" />
+    <file path="/edit.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1437080739963" ignored="false" />
+    <file path="/app.php" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1437083157066" ignored="false" />
+    <file path="/view.ctp" changelist="c287c31f-3b2b-45a4-b853-f9c086ead262" time="1437085637717" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,122 +87,113 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="kfa" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.75">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="UsersController.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Controller/UsersController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="194" column="0" selection-start="5954" selection-end="5954" vertical-scroll-proportion="-6.8039217">
-                  <folding>
-                    <element signature="e#33#66#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="sidebar.ctp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Template/Element/sidebar.ctp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="35" column="39" selection-start="1262" selection-end="1389" vertical-scroll-proportion="-4.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="admin.ctp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Template/Layout/admin.ctp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="110" column="49" selection-start="3705" selection-end="3705" vertical-scroll-proportion="-12.884615">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="dashboard.ctp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Template/Users/dashboard.ctp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="34" column="39" selection-start="1640" selection-end="1640" vertical-scroll-proportion="-3.8461537">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="add.ctp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Template/Categories/add.ctp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="17" column="48" selection-start="960" selection-end="1061" vertical-scroll-proportion="-11.115385">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="edit.ctp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Template/Categories/edit.ctp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="0" selection-start="1299" selection-end="1299" vertical-scroll-proportion="-15.692307">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CategoriesController.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Controller/CategoriesController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="25" column="68" selection-start="565" selection-end="565" vertical-scroll-proportion="-16.346153">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.ctp" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Template/Categories/index.ctp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="22" column="53" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.67">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CategoriesTable.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Model/Table/CategoriesTable.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="78" column="44" selection-start="1770" selection-end="2182" vertical-scroll-proportion="-37.307693">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="app.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config/app.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="198" column="48" selection-start="7448" selection-end="7448" vertical-scroll-proportion="-1.6078432">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="default.ctp" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Template/Layout/default.ctp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="46" column="94" selection-start="1642" selection-end="1642" vertical-scroll-proportion="0.38003838">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="CustomersController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/CustomersController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="26" selection-start="1471" selection-end="1471" vertical-scroll-proportion="-1.0392157">
+              <folding>
+                <element signature="e#33#66#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfilesTable.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Table/ProfilesTable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="8.576923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersTable.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Table/UsersTable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="10" selection-start="690" selection-end="776" vertical-scroll-proportion="-8.538462">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Template/Customers/view.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="1565" selection-end="1565" vertical-scroll-proportion="-2.5">
+              <folding>
+                <marker date="1437086398504" expanded="true" signature="1618:1694" placeholder="..." />
+                <marker date="1437086398504" expanded="true" signature="1656:1694" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Template/Inventories/add.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Template/Inventories/index.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="32" selection-start="972" selection-end="972" vertical-scroll-proportion="-5.3076925">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webroot/css/layout.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="739" column="11" selection-start="13882" selection-end="13882" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.ctp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Template/Profiles/view.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="88" selection-end="88" vertical-scroll-proportion="0.055374593">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Template/Inventories/edit.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Template/Inventories/view.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="34" selection-start="789" selection-end="789" vertical-scroll-proportion="-3.9230769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -208,28 +211,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Controller/ProfilesController.php" />
-        <option value="$PROJECT_DIR$/src/Model/Entity/Profile.php" />
-        <option value="$PROJECT_DIR$/src/Template/Users/login.ctp" />
-        <option value="$PROJECT_DIR$/src/Controller/AppController.php" />
-        <option value="$PROJECT_DIR$/src/Model/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/Template/Users/forgotpwd.ctp" />
+        <option value="$PROJECT_DIR$/config/bootstrap.php" />
+        <option value="$PROJECT_DIR$/src/Template/Customers/add.ctp" />
+        <option value="$PROJECT_DIR$/src/Template/Customers/edit.ctp" />
+        <option value="$PROJECT_DIR$/src/Model/Table/CustomersTable.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/src/Controller/UsersController.php" />
-        <option value="$PROJECT_DIR$/src/Template/Element/sidebar.ctp" />
-        <option value="$PROJECT_DIR$/src/Template/Layout/admin.ctp" />
-        <option value="$PROJECT_DIR$/src/Template/Users/dashboard.ctp" />
-        <option value="$PROJECT_DIR$/src/Model/Table/CategoriesTable.php" />
-        <option value="$PROJECT_DIR$/src/Template/Categories/add.ctp" />
-        <option value="$PROJECT_DIR$/src/Template/Categories/edit.ctp" />
-        <option value="$PROJECT_DIR$/src/Controller/CategoriesController.php" />
-        <option value="$PROJECT_DIR$/src/Template/Categories/index.ctp" />
+        <option value="$PROJECT_DIR$/src/Model/Entity/Customer.php" />
+        <option value="$PROJECT_DIR$/src/Model/Table/UsersTable.php" />
+        <option value="$PROJECT_DIR$/src/View/AppView.php" />
+        <option value="$PROJECT_DIR$/src/Controller/CustomersController.php" />
+        <option value="$PROJECT_DIR$/src/Template/Customers/view.ctp" />
+        <option value="$PROJECT_DIR$/src/Template/Inventories/add.ctp" />
+        <option value="$PROJECT_DIR$/src/Template/Inventories/edit.ctp" />
+        <option value="$PROJECT_DIR$/src/Template/Inventories/view.ctp" />
+        <option value="$PROJECT_DIR$/src/Template/Inventories/index.ctp" />
+        <option value="$PROJECT_DIR$/webroot/css/layout.css" />
+        <option value="$PROJECT_DIR$/src/Template/Profiles/view.ctp" />
       </list>
     </option>
   </component>
   <component name="PhpTemplates">
     <option name="NEW_PHP_FILE_LAST_EXTENSION" value="ctp" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -262,6 +266,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -290,7 +295,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kfa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kfa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kfa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kfa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,7 +371,65 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Categories" />
+              <option name="myItemId" value="Profiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kfa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kfa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Inventories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kfa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kfa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Customers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kfa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kfa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -353,6 +452,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Table" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kfa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kfa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -408,7 +529,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,8 +536,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../securetech" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -457,14 +578,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67064846" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23030303" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23409091" sideWeight="0.67064846" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -541,118 +662,119 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Template/Users/login.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="113" selection-start="393" selection-end="393" vertical-scroll-proportion="-4.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Profiles/add.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="43" selection-start="811" selection-end="811" vertical-scroll-proportion="0.576">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Profiles/edit.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.816">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ProfilesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="9" selection-start="715" selection-end="1087" vertical-scroll-proportion="41.692307">
-          <folding>
-            <element signature="e#33#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Users/add.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="4" selection-start="832" selection-end="872" vertical-scroll-proportion="-12.423077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Users/forgotpwd.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="34" selection-start="546" selection-end="546" vertical-scroll-proportion="-7.8461537">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="48" selection-start="7448" selection-end="7448" vertical-scroll-proportion="-1.6078432">
+        <state line="11" column="15" selection-start="229" selection-end="233" vertical-scroll-proportion="-3.6666667">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/UsersController.php">
+    <entry file="file://$PROJECT_DIR$/src/Model/Entity/Customer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="0" selection-start="5954" selection-end="5954" vertical-scroll-proportion="-6.8039217">
+        <state line="26" column="13" selection-start="557" selection-end="557" vertical-scroll-proportion="-7.423077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Table/CustomersTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="37" selection-start="813" selection-end="813" vertical-scroll-proportion="-8.615385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.5625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Entity/Profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.05625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Table/ProfilesTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="8.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Table/UsersTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="10" selection-start="690" selection-end="776" vertical-scroll-proportion="-8.538462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/AppView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="31" selection-start="854" selection-end="854" vertical-scroll-proportion="-9.923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CustomersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="26" selection-start="1471" selection-end="1471" vertical-scroll-proportion="-1.0392157">
           <folding>
             <element signature="e#33#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Element/sidebar.ctp">
+    <entry file="file://$PROJECT_DIR$/src/Template/Customers/view.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="39" selection-start="1262" selection-end="1389" vertical-scroll-proportion="-4.0">
+        <state line="29" column="0" selection-start="1565" selection-end="1565" vertical-scroll-proportion="-2.5">
+          <folding>
+            <marker date="1437086398504" expanded="true" signature="1618:1694" placeholder="..." />
+            <marker date="1437086398504" expanded="true" signature="1656:1694" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Inventories/add.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Layout/admin.ctp">
+    <entry file="file://$PROJECT_DIR$/src/Template/Inventories/edit.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="49" selection-start="3705" selection-end="3705" vertical-scroll-proportion="-12.884615">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Users/dashboard.ctp">
+    <entry file="file://$PROJECT_DIR$/src/Template/Inventories/view.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="39" selection-start="1640" selection-end="1640" vertical-scroll-proportion="-3.8461537">
+        <state line="13" column="34" selection-start="789" selection-end="789" vertical-scroll-proportion="-3.9230769">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Table/CategoriesTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Template/Inventories/index.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="44" selection-start="1770" selection-end="2182" vertical-scroll-proportion="-37.307693">
+        <state line="20" column="32" selection-start="972" selection-end="972" vertical-scroll-proportion="-5.3076925">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Categories/add.ctp">
+    <entry file="file://$PROJECT_DIR$/webroot/css/layout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="48" selection-start="960" selection-end="1061" vertical-scroll-proportion="-11.115385">
+        <state line="739" column="11" selection-start="13882" selection-end="13882" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Categories/edit.ctp">
+    <entry file="file://$PROJECT_DIR$/src/Template/Profiles/view.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="1299" selection-end="1299" vertical-scroll-proportion="-15.692307">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CategoriesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="68" selection-start="565" selection-end="565" vertical-scroll-proportion="-16.346153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Categories/index.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="53" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.67">
+        <state line="1" column="0" selection-start="88" selection-end="88" vertical-scroll-proportion="0.055374593">
           <folding />
         </state>
       </provider>

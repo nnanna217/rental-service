@@ -18,6 +18,7 @@ class User extends Entity
     protected $_accessible = [
         'email' => true,
         'password' => true,
+        'confirm_password' => true,
         'role' => true,
         'active_fg' => true,
         'profiles' => true,
@@ -26,6 +27,10 @@ class User extends Entity
     ];
 
     protected function _setPassword($password){
+        return (new DefaultPasswordHasher())->hash($password);
+    }
+
+    protected function _setConfirmPassword($password){
         return (new DefaultPasswordHasher())->hash($password);
     }
 
