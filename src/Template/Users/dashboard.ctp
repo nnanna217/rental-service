@@ -91,10 +91,15 @@
 <div class="clear"></div>
 
     <article class="module width_full">
+
         <header><h3 class="tabs_involved">INVENTORY LIST</h3>
             <ul class="tabs">
-                <li><a href="#tab1">Inventory List</a></li>
-                <li><a href="#tab2">Quotations</a></li>
+                <?php foreach ($categories as $category): ?>
+                    <a href="<?php echo '#'. $category->name; ?>">
+                        <?php echo $category->name; ?>
+                    </a></li>
+                <?php endforeach; ?>
+<!--                <li><a href="#tab2">Quotations</a></li>-->
             </ul>
         </header>
 
@@ -104,46 +109,18 @@
                     <thead>
                     <tr>
                         <th></th>
-                        <th>Entry Name</th>
-                        <th>Category</th>
-                        <th>Created On</th>
-                        <th>Actions</th>
+                        <th>Name</th>
+                        <th>Color</th>
+                        <th>Rate</th>
+                        <th>Quantity</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <td><input type="checkbox"></td>
-                        <td>Lorem Ipsum Dolor Sit Amet</td>
+                        <td><?php echo $category->inventories[0]->name ?></td>
                         <td>Articles</td>
                         <td>5th April 2011</td>
-                        <td><input type="image" src="../img/icn_edit.png" title="Edit"><input type="image" src="../img/icn_trash.png" title="Trash"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>Ipsum Lorem Dolor Sit Amet</td>
-                        <td>Freebies</td>
-                        <td>6th April 2011</td>
-                        <td><input type="image" src="../img/icn_edit.png" title="Edit"><input type="image" src="../img/icn_trash.png" title="Trash"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>Sit Amet Dolor Ipsum</td>
-                        <td>Tutorials</td>
-                        <td>10th April 2011</td>
-                        <td><input type="image" src="../img/icn_edit.png" title="Edit"><input type="image" src="../img/icn_trash.png" title="Trash"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>Dolor Lorem Amet</td>
-                        <td>Articles</td>
-                        <td>16th April 2011</td>
-                        <td><input type="image" src="../img/icn_edit.png" title="Edit"><input type="image" src="../img/icn_trash.png" title="Trash"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>Dolor Lorem Amet</td>
-                        <td>Articles</td>
-                        <td>16th April 2011</td>
                         <td><input type="image" src="../img/icn_edit.png" title="Edit"><input type="image" src="../img/icn_trash.png" title="Trash"></td>
                     </tr>
                     </tbody>
@@ -169,34 +146,34 @@
                         <td>5th April 2011</td>
                         <td><input type="image" src="../img/icn_edit.png" title="Edit"><input type="image" src="../img/icn_trash.png" title="Trash"></td>
                     </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>Ipsum Lorem Dolor Sit Amet</td>
-                        <td>Jeremy Usbourne</td>
-                        <td>6th April 2011</td>
-                        <td><input type="image" src="../img/icn_edit.png" title="Edit"><input type="image" src="../img/icn_trash.png" title="Trash"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>Sit Amet Dolor Ipsum</td>
-                        <td>Super Hans</td>
-                        <td>10th April 2011</td>
-                        <td><input type="image" src="../img/icn_edit.png" title="Edit"><input type="image" src="../img/icn_trash.png" title="Trash"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>Dolor Lorem Amet</td>
-                        <td>Alan Johnson</td>
-                        <td>16th April 2011</td>
-                        <td><input type="image" src="../img/icn_edit.png" title="Edit"><input type="image" src="../img/icn_trash.png" title="Trash"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>Dolor Lorem Amet</td>
-                        <td>Dobby</td>
-                        <td>16th April 2011</td>
-                        <td><input type="image" src="../img/icn_edit.png" title="Edit"><input type="image" src="../img/icn_trash.png" title="Trash"></td>
-                    </tr>
+<!--                    <tr>-->
+<!--                        <td><input type="checkbox"></td>-->
+<!--                        <td>Ipsum Lorem Dolor Sit Amet</td>-->
+<!--                        <td>Jeremy Usbourne</td>-->
+<!--                        <td>6th April 2011</td>-->
+<!--                        <td><input type="image" src="../img/icn_edit.png" title="Edit"><input type="image" src="../img/icn_trash.png" title="Trash"></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td><input type="checkbox"></td>-->
+<!--                        <td>Sit Amet Dolor Ipsum</td>-->
+<!--                        <td>Super Hans</td>-->
+<!--                        <td>10th April 2011</td>-->
+<!--                        <td><input type="image" src="../img/icn_edit.png" title="Edit"><input type="image" src="../img/icn_trash.png" title="Trash"></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td><input type="checkbox"></td>-->
+<!--                        <td>Dolor Lorem Amet</td>-->
+<!--                        <td>Alan Johnson</td>-->
+<!--                        <td>16th April 2011</td>-->
+<!--                        <td><input type="image" src="../img/icn_edit.png" title="Edit"><input type="image" src="../img/icn_trash.png" title="Trash"></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td><input type="checkbox"></td>-->
+<!--                        <td>Dolor Lorem Amet</td>-->
+<!--                        <td>Dobby</td>-->
+<!--                        <td>16th April 2011</td>-->
+<!--                        <td><input type="image" src="../img/icn_edit.png" title="Edit"><input type="image" src="../img/icn_trash.png" title="Trash"></td>-->
+<!--                    </tr>-->
                     </tbody>
                 </table>
 

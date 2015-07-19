@@ -38,9 +38,9 @@ class CategoriesTable extends Table
             'className' => 'Categories',
             'foreignKey' => 'parent_id'
         ]);
-//        $this->hasMany('Categories', [
-//            'foreignKey' => 'category_id'
-//        ]);
+        $this->hasMany('Inventories', [
+            'foreignKey' => 'category_id'
+        ]);
     }
 
     /**

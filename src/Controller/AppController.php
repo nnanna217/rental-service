@@ -57,6 +57,8 @@ class AppController extends Controller
 
         ]);
 
+        $this->layout = 'admin';
+
 //        $this->Auth->config('authorize', [
 //            'Controller'
 //        ]);

@@ -41,20 +41,14 @@ $user = $this->request->session()->read('Auth.userdetails');
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script>
-        $(function() {
-            $( ".datepicker" ).datepicker();
-        });
-    </script>
 </head>
 <body>
-    <header>
+<header>
 
-        <div class="header-title">
-            <span><?= $this->fetch('title') ?></span>
-        </div>
-        <div class="header-help">
+    <div class="header-title">
+        <span><?= $this->fetch('title') ?></span>
+    </div>
+    <div class="header-help">
             <span>
 <!--                <a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a>-->
                 <?php echo $this->Html->link('Back to Dashboard',['controller'=>'users','action'=>'dashboard']);?>
@@ -62,38 +56,20 @@ $user = $this->request->session()->read('Auth.userdetails');
             <span>
                 <?php echo $this->Html->link('Logout',['controller'=>'users','action'=>'logout']);?>
             </span>
-        </div>
-    </header>
-    <div id="container">
-
-        <div id="content">
-            <?= $this->Flash->render() ?>
-
-
-            <aside id="sidebar" class="column">
-                <?php
-                echo $this->element('sidebar',['users'=>$user]);
-                ?>
-
-                <?php
-                echo $this->fetch('customer');
-                echo $this->fetch('inventory');
-                echo $this->fetch('quote');
-                echo $this->fetch('users');
-                if($user[0]->role == 'admin'):
-                    echo $this->fetch('admin');
-                endif;
-                echo $this->fetch('footer');
-                ?>
-            </aside><!-- end of sidebar -->
-
-
-            <div class="row">
-                <?= $this->fetch('content') ?>
-            </div>
-        </div>
-        <footer>
-        </footer>
     </div>
+</header>
+<div id="container">
+
+    <div id="content">
+        <?= $this->Flash->render() ?>
+
+
+        <div class="row">
+            <?= $this->fetch('content') ?>
+        </div>
+    </div>
+    <footer>
+    </footer>
+</div>
 </body>
 </html>

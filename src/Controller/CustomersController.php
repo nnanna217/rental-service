@@ -21,7 +21,7 @@ class CustomersController extends AppController
 
         $action = $this->request->params['action'];
         // The add and index actions are always allowed.
-        if (in_array($action, ['index', 'add', 'edit','view'])) {
+        if (in_array($action, ['index', 'add', 'edit','view','test'])) {
             return true;
         }
 // All other actions require an id.
@@ -33,6 +33,14 @@ class CustomersController extends AppController
         return parent::isAuthorized($user);
     }
 
+    public function test(){
+        $customers = TableRegistry::get('Customers');
+        $this->paginate = [
+            'contain' => []
+        ];
+        $this->set('customers', $this->paginate($customers));
+        $this->set('_serialize', ['customers']);
+    }
     /**
      * Index method
      *

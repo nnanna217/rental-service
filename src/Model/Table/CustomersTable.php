@@ -6,6 +6,7 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Search\Manager;
 
 /**
  * Customers Model
@@ -27,6 +28,7 @@ class CustomersTable extends Table
         $this->displayField('name');
         $this->primaryKey('id');
         $this->addBehavior('Timestamp');
+        $this->addBehavior('Search.Search');
         $this->belongsTo('Users', [
             'foreignKey' => 'created_by',
             'joinType' => 'INNER'
@@ -88,5 +90,20 @@ class CustomersTable extends Table
     {
         $rules->add($rules->existsIn(['category_id'], 'Categories'));
         return $rules;
+    }
+
+    public function searchConfiguration()
+    {
+        $search = new Manager($this);
+        $search
+            ->value('name', [
+                'field' => $this->aliasField('name')
+            ])
+            ->like('q', [
+                'before' => true,
+                'after' => true,
+                'field' => [$this->aliasField('name')]
+            ]);
+        return $search;
     }
 }

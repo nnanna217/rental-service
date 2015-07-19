@@ -155,15 +155,39 @@ class UsersController extends AppController
 
     public function dashboard()
     {
-        $this->layout = 'admin';
+
         $user = $this->Users->get($this->Auth->user('id'), [
             'contain' => ['Profiles']
         ]);
+
+        $categories = TableRegistry::get('Categories');
+//        $inventories = TableRegistry::get('Inventories');
+//        $this->paginate = [
+//            'contain' => ['Inventories']
+//        ];
+        $categorylist = $categories->find('all')
+            ->where(['active_fg'=>1])
+            ->contain(['Inventories']);
+
+//        $this->paginate = [
+//            'contain' => ['Categories']
+//        ];
+//        $this->set('inventories', $this->paginate($inventories));
+//        $this->set('_serialize', ['inventories']);
+
+        $this->set('categories', $this->paginate($categorylist));
+        $this->set('_serialize', ['categories']);
+
+//        debug($categorylist->toArray());exit;
+
         $this->set('user',$user);
+        $this->set('categories',$categorylist);
+        $this->layout = 'admin';
     }
 
     public function login()
     {
+        $this->layout = 'login';
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
             if ($user) {

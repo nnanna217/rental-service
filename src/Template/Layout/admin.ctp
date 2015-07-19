@@ -94,12 +94,25 @@ $user = $this->request->session()->read('Auth.userdetails');
 
 <header id="header">
 
-    <hgroup>
+    <!--<hgroup>
 
+        <?php /*echo $this->Html->image('/img/logo.png');*/?>
         <h1 class="site_title"><a href="index.html">Website Admin</a></h1>
         <h2 class="section_title">Dashboard</h2>
         <div class="btn_view_site">
-<!--            <a href="http://www.medialoot.com">View Site</a>-->
+            <?php /*echo $this->Html->link('Logout',['action'=>'logout']) */?>
+        </div>
+    </hgroup>-->
+    <hgroup class="clearfix">
+        <a class="logo-holder">
+            <?php echo $this->Html->image('/img/logo.png');?>
+        </a>
+        <div class="site-title-wrap">
+            <h1 class="site_title">KFA Rentals Inventory Management System</h1>
+        </div>
+
+        <div class="btn_view_site logout-link-wrap">
+            <!--            <a href="http://www.medialoot.com">View Site</a>-->
             <?php echo $this->Html->link('Logout',['action'=>'logout']) ?>
         </div>
     </hgroup>
@@ -128,6 +141,7 @@ $user = $this->request->session()->read('Auth.userdetails');
     <?php
     echo $this->fetch('customer');
     echo $this->fetch('inventory');
+    echo $this->fetch('quote');
     echo $this->fetch('users');
     if($user[0]->role == 'admin'):
     echo $this->fetch('admin');

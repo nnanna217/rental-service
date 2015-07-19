@@ -16,6 +16,23 @@ font-size: 12px;
 .clear {
 clear: both;
 }
+.clearfix:before,
+.clearfix:after{
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.hidden{
+    display: none;
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
 
 .spacer {
 height: 20px;
@@ -883,3 +900,96 @@ color: #32510F;
 padding: 10px 0;
 text-indent: 40px;
 font-size: 14px;}
+
+
+.table-sub-total {
+    margin-top: 30px;
+}
+.table-sub-total-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    height: 30px;
+    line-height: 30px;
+}
+.table-sub-total-label {
+    margin-left: 40%;
+    text-align: right;
+    float: left;
+    width: 30%;
+}
+.table-sub-total-price {
+    float: right;
+    margin-left: 5%;
+    width: 25%;
+}
+.table-sub-total-price span {
+    color: #666;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+.table-sub-total-price input {
+    width: 90%;
+    display: block;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 5%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.logo-holder {
+    float: left;
+    display: block;
+    padding-top: 15px;
+    padding-left: 20px;
+    height: 90px;
+    padding-bottom: 15px;
+}
+.logo-holder img {
+    display: block;
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+}
+.site-title-wrap {
+    float: left;
+    padding-top: 40px;
+    margin-left: 50px;
+    width: 600px;
+}
+.site-title-wrap .site_title {
+    float: none !important;
+    width: 100% !important;
+}
+
+.logout-link-wrap {
+    float: right;
+    padding-top: 40px;
+    padding-right: 20px;
+}
+ul.pagination li a {
+    color: rgba(0, 0 ,0 , 0.54);
+}
+
+ul.pagination li.active a {
+    background: none repeat scroll 0% 0% #DCE47E;
+    color: #FFF;
+    font-weight: bold;
+    cursor: default;
+}
+
+.paginator {
+    text-align: center;
+}
+
+.paginator ul.pagination li {
+    float: none;
+    display: inline-block;
+}
+
+.paginator p {
+    text-align: right;
+    color: rgba(0, 0 ,0 , 0.54);
+}
